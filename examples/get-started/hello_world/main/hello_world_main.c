@@ -5,6 +5,29 @@
    Unless required by applicable law or agreed to in writing, this
    software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
    CONDITIONS OF ANY KIND, either express or implied.
+
+芯片脚位定义
+
+             --------------------------------------------------
+    模拟3V3 |01|VDDA                                EXT_RSTB|32| #RST
+   WIFI_ANT |02|LNA                                   RES12K|31| RES_12K - GND
+    功放3V3 |03|VDD3P3                                  VDDA|30| 模拟3V3
+    功放3V3 |04|VDD3P3                                  VDDD|29| 模拟3V3
+         NC |05|VDD_RTC                              XTAL_IN|28| 26MHz
+        ADC |06|TOUT                                XTAL_OUT|27| 26MHz
+            |07|CHIP_EN                  SPI_CS1/U0TXD/GPIO1|26| TXD
+            |08|GPIO16/XPD_DCDC        I2SO_DATA/U0RXD/GPIO3|25| RXD
+           <                                                    >
+            |09|GPIO14/MTMS                            GPIO5|24| 
+            |10|GPIO12/MTDI                      SD_D1/GPIO8|23| FL_DI
+    数字3V3 |11|VDDPST                           SD_D0/GPIO7|22| FL_DO
+            |12|GPIO13/MTCK                     SD_CLK/GPIO6|21| FL_CLK
+            |13|GPIO15/MTDO/I2SO_BCK   SPI_CS0/SD_CMD/GPIO11|20| FL_#CS
+            |14|GPIO2/U1TXD/I2SO_WS             SD_D3/GPIO10|19| FL_#WP
+            |15|GPIO0/SPI_CS2                    SD_D2/GPIO9|18| FL_#HOLD
+            |16|GPIO4                                 VDDPST|17| 数字3V3
+             --------------------------------------------------
+                                     |33|GND
 */
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
