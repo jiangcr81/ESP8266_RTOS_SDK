@@ -28,6 +28,22 @@
             |16|GPIO4                                 VDDPST|17| 数字3V3
              --------------------------------------------------
                                      |33|GND
+
+原厂模块脚位定义
+            |                                                  |
+            |                      ANTENNA                     |
+            |                                                  |
+            |--------------------------------------------------|
+            |01|3V3                                      GND|18| 
+            |02|EN                                      IO16|17| 
+            |03|IO14/HSPI_CLK                           TOUT|16| 
+            |04|IO12/HSPI_MISO                           RST|15| 
+            |05|IO13/HSPI_MOSI/UART0_CTS                 IO5|14| 
+            |06|IO15/HSPI_CS/UART0_RTS                   GND|13| 
+            |07|IO2/UART1_TXD                  UART0_TXD/IO1|12| 
+            |08|IO0                            UART0_RXD/IO3|11| 
+            |09|GND                                      IO4|10| 
+             --------------------------------------------------
 */
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
